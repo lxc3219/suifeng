@@ -1,0 +1,6 @@
+/**
+ * 统一封装结果集
+ * @createTime 2019/6/9 22:01
+ * @author luoxc
+ */
+package org.suifeng.baseframework.api.result;
