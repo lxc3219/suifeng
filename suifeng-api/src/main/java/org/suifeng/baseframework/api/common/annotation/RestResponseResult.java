@@ -7,6 +7,7 @@ import java.lang.annotation.*;
 /**
  * 自定义标识注解，用于标识该接口需要被Result包装
  * 常标记于类上，代替@Controller，@ResponseBody，@ResponseResult
+ * TODO 这个注解要不要废弃，直接使用 @RestController 去判断？？？存在的唯一理由就是要不要强制统一返回体包装
  * @createTime 2019/5/26 11:58
  * @author luoxc
  */

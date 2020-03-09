@@ -25,6 +25,11 @@
         </developer>
     </developers>
 
+    <issueManagement>
+        <system>Github</system>
+        <url>https://github.com/lxc3219/suifeng/issues</url>
+    </issueManagement>
+
     <distributionManagement>
         <repository>
             <id>releases</id>
