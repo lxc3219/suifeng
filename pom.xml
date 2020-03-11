@@ -42,7 +42,6 @@
         <module>suifeng-starter</module>
         <module>suifeng-demo</module>
         <module>suifeng-guide</module>
-
     </modules>
 
     <build>
