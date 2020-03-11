@@ -1,1 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.suifeng.baseframework.spring.boot.suifengAutoConfiguration
