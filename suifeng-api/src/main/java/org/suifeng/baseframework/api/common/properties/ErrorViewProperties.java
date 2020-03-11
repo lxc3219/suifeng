@@ -1,4 +1,4 @@
-package org.suifeng.baseframework.api.common.domain;
+package org.suifeng.baseframework.api.common.properties;
 
 import lombok.Getter;
 import lombok.Setter;

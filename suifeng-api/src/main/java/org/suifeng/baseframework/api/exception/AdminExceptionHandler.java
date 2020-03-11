@@ -3,7 +3,7 @@ package org.suifeng.baseframework.api.exception;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONException;
 import com.google.common.collect.Maps;
-import org.suifeng.baseframework.api.common.domain.ErrorViewProperties;
+import org.suifeng.baseframework.api.common.properties.ErrorViewProperties;
 import org.suifeng.baseframework.api.common.domain.CommonResult;
 import org.suifeng.baseframework.api.common.enums.ResultEnum;
 import org.suifeng.baseframework.api.common.exception.BizException;
