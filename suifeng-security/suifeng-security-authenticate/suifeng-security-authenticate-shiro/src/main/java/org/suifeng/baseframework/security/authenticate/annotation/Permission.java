@@ -1,4 +1,4 @@
-package org.suifeng.baseframework.security.authenticate.shiro.annotation;
+package org.suifeng.baseframework.security.authenticate.annotation;
 
 import java.lang.annotation.*;
 

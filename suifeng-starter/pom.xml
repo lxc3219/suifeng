@@ -10,6 +10,7 @@
 		<relativePath>../suifeng-parent</relativePath>
 	</parent>
 	<artifactId>suifeng-starter</artifactId>
+	<packaging>pom</packaging>
 
 	<name>suifeng-starter</name>
 	<inceptionYear>2019</inceptionYear>
