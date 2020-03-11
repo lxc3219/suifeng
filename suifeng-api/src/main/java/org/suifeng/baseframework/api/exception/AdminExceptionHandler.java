@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONException;
 import com.google.common.collect.Maps;
 import org.suifeng.baseframework.api.common.domain.ErrorViewProperties;
-import org.suifeng.baseframework.api.common.domain.Result;
+import org.suifeng.baseframework.api.common.domain.CommonResult;
 import org.suifeng.baseframework.api.common.enums.ResultEnum;
 import org.suifeng.baseframework.api.common.exception.BizException;
 import org.suifeng.baseframework.api.common.helper.RestHelper;
@@ -47,7 +47,7 @@ public class AdminExceptionHandler {
      */
     @ExceptionHandler(BizException.class)
     @ResponseBody
-    public Result bizError(BizException e) {
+    public CommonResult bizError(BizException e) {
         log.error("业务异常：", e);
         return RestHelper.bizError(e.getCode(), e.getMessage());
     }
@@ -74,7 +74,7 @@ public class AdminExceptionHandler {
     @ExceptionHandler(RuntimeException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ResponseBody
-    public Result unknowError(RuntimeException e) {
+    public CommonResult unknowError(RuntimeException e) {
         log.error("运行时异常:", e);
         return RestHelper.error(ResultEnum.SERVICE_EXCEPTION.getCode(), ResultEnum.SERVICE_EXCEPTION.getMsg());
     }

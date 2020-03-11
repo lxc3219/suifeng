@@ -1,6 +1,6 @@
 package org.suifeng.baseframework.api.common.helper;
 
-import org.suifeng.baseframework.api.common.domain.Result;
+import org.suifeng.baseframework.api.common.domain.CommonResult;
 import org.suifeng.baseframework.api.common.enums.BaseExceptionEnum;
 import org.springframework.http.HttpStatus;
 
@@ -13,7 +13,7 @@ public class RestHelper {
      * @param <T>
      * @return
      */
-    public static <T> Result<T> ok() {
+    public static <T> CommonResult<T> ok() {
         return ok(null);
     }
 
@@ -22,8 +22,8 @@ public class RestHelper {
      * @param <T>
      * @return
      */
-    public static <T> Result<T> ok(T data) {
-        return new Result<T>()
+    public static <T> CommonResult<T> ok(T data) {
+        return new CommonResult<T>()
                 .success(Boolean.TRUE)
                 .status(HttpStatus.OK.value())
                 .data(data)
@@ -36,7 +36,7 @@ public class RestHelper {
      * @param <T>
      * @return
      */
-    public static <T> Result<T> error(String msg) {
+    public static <T> CommonResult<T> error(String msg) {
         return error(HttpStatus.INTERNAL_SERVER_ERROR.value(), msg);
     }
 
@@ -47,7 +47,7 @@ public class RestHelper {
      * @param <T>
      * @return
      */
-    public static <T> Result<T> error(Integer status, String msg) {
+    public static <T> CommonResult<T> error(Integer status, String msg) {
         return error(status, null, msg);
     }
 
@@ -58,7 +58,7 @@ public class RestHelper {
      * @param <T>
      * @return
      */
-    public static <T> Result<T> bizError(Integer code, String msg) {
+    public static <T> CommonResult<T> bizError(Integer code, String msg) {
         return error(HttpStatus.INTERNAL_SERVER_ERROR.value(), code, msg);
     }
 
@@ -68,7 +68,7 @@ public class RestHelper {
      * @param <T>
      * @return
      */
-    public static <T> Result<T> bizError(BaseExceptionEnum baseExceptionEnum) {
+    public static <T> CommonResult<T> bizError(BaseExceptionEnum baseExceptionEnum) {
         return bizError(baseExceptionEnum.getCode(), baseExceptionEnum.getMsg());
     }
 
@@ -80,8 +80,8 @@ public class RestHelper {
      * @param <T>
      * @return
      */
-    public static <T> Result<T> error(Integer status, Integer code, String msg) {
-        return new Result<T>()
+    public static <T> CommonResult<T> error(Integer status, Integer code, String msg) {
+        return new CommonResult<T>()
                 .success(Boolean.FALSE)
                 .status(status)
                 .code(code)

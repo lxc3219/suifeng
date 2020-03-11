@@ -1,7 +1,6 @@
 package org.suifeng.baseframework.api.exception;
 
 import org.suifeng.baseframework.api.common.domain.*;
-import org.suifeng.baseframework.api.common.domain.*;
 import org.suifeng.baseframework.api.common.exception.BizException;
 import org.suifeng.baseframework.api.common.exception.RestException;
 import org.suifeng.baseframework.api.common.helper.RestHelper;
@@ -99,7 +98,7 @@ public class RestExceptionHandler {
      */
     @ExceptionHandler(BizException.class)
     @ResponseBody
-    public Result bizError(BizException e) {
+    public CommonResult bizError(BizException e) {
         log.error("业务异常：", e);
         return RestHelper.bizError(e.getCode(), e.getMessage());
     }

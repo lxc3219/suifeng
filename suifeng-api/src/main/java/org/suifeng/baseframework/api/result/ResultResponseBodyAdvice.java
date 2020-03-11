@@ -1,6 +1,6 @@
 package org.suifeng.baseframework.api.result;
 
-import org.suifeng.baseframework.api.common.domain.Result;
+import org.suifeng.baseframework.api.common.domain.CommonResult;
 import org.suifeng.baseframework.api.constant.ApiConfigConsts;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -50,8 +50,8 @@ public class ResultResponseBodyAdvice implements ResponseBodyAdvice<Object> {
     public Object beforeBodyWrite(Object body, MethodParameter returnType, MediaType selectedContentType,
                                   Class<? extends HttpMessageConverter<?>> selectedConverterType,
                                   ServerHttpRequest request, ServerHttpResponse response) {
-        // 如果返回体已经是Result类型，则不必再次包装
-        if ((body instanceof Result)) {
+        // 如果返回体已经是CommonResult类型，则不必再次包装
+        if ((body instanceof CommonResult)) {
             return body;
         }
         log.debug("进入 返回体 重写格式 处理中...");

@@ -1,7 +1,7 @@
 package org.suifeng.baseframework.demo.responseresult;
 
 import org.suifeng.baseframework.api.common.annotation.ResponseResult;
-import org.suifeng.baseframework.api.common.domain.Result;
+import org.suifeng.baseframework.api.common.domain.CommonResult;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +21,7 @@ public class ResponseResultController {
 
     @GetMapping(value="/str2")
     @ResponseBody
-    public Result responseStr2() {
+    public CommonResult responseStr2() {
         return ok("ok");
     }
 

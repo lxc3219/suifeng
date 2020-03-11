@@ -17,7 +17,7 @@ import java.util.Set;
 @ApiModel(value = "响应结果")
 @Setter
 @Getter
-public class Result<T> implements Serializable {
+public class CommonResult<T> implements Serializable {
 
     @ApiModelProperty(value = "是否成功", required =  true)
     private Boolean success;
@@ -51,13 +51,13 @@ public class Result<T> implements Serializable {
     @JsonIgnore
     private transient Map<Class<?>, Set<String>> excludes;
 
-    public Result() {}
+    public CommonResult() {}
 
-//    public Result<T> include(Class<?> type, String... fields) {
+//    public CommonResult<T> include(Class<?> type, String... fields) {
 //        return include(type, Arrays.asList(fields));
 //    }
 
-//    public Result<T> include(Class<?> type, Collection<String> fields) {
+//    public CommonResult<T> include(Class<?> type, Collection<String> fields) {
 //        if (includes == null) {
 //            includes = new HashMap<>();
 //        }
@@ -81,11 +81,11 @@ public class Result<T> implements Serializable {
 //        return this;
 //    }
 
-//    public Result<T> exclude(Class type, String... fields) {
+//    public CommonResult<T> exclude(Class type, String... fields) {
 //        return exclude(type, Arrays.asList(fields));
 //    }
 
-//    public Result<T> exclude(Class type, Collection<String> fields) {
+//    public CommonResult<T> exclude(Class type, Collection<String> fields) {
 //        if (excludes == null) {
 //            excludes = new HashMap<>();
 //        }
@@ -109,7 +109,7 @@ public class Result<T> implements Serializable {
 //        return this;
 //    }
 
-//    public Result<T> exclude(String... fields) {
+//    public CommonResult<T> exclude(String... fields) {
 //        return exclude(Arrays.asList(fields));
 //    }
 
@@ -155,32 +155,32 @@ public class Result<T> implements Serializable {
 //        return map.computeIfAbsent(type, k -> new HashSet<>());
 //    }
 
-    public Result<T> success(Boolean success) {
+    public CommonResult<T> success(Boolean success) {
         this.success = success;
         return this;
     }
 
-    public Result<T> status(Integer status) {
+    public CommonResult<T> status(Integer status) {
         this.status = status;
         return this;
     }
 
-    public Result<T> code(Integer code) {
+    public CommonResult<T> code(Integer code) {
         this.code = code;
         return this;
     }
 
-    public Result<T> data(T data) {
+    public CommonResult<T> data(T data) {
         this.data = data;
         return this;
     }
 
-    public Result<T> msg(String msg) {
+    public CommonResult<T> msg(String msg) {
         this.msg = msg;
         return this;
     }
 
-    public Result<T> putTimeStamp() {
+    public CommonResult<T> putTimeStamp() {
         this.timestamp = System.currentTimeMillis();
         return this;
     }
