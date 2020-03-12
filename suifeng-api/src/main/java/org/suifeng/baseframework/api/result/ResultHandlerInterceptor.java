@@ -2,7 +2,7 @@ package org.suifeng.baseframework.api.result;
 
 import org.suifeng.baseframework.api.common.annotation.ResponseResult;
 import org.suifeng.baseframework.api.common.annotation.RestResponseResult;
-import org.suifeng.baseframework.api.constant.ApiConfigConsts;
+import org.suifeng.baseframework.api.constant.ApiConfigConstants;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
@@ -40,12 +40,12 @@ public class ResultHandlerInterceptor implements HandlerInterceptor {
                 } else {
                     var = clazz.getAnnotation(RestResponseResult.class);
                 }
-                request.setAttribute(ApiConfigConsts.RESPONSE_RESULT_ANN, var);
+                request.setAttribute(ApiConfigConstants.RESPONSE_RESULT_ANN, var);
             }
             // 方法体上是否有注解
             else if (method.isAnnotationPresent(ResponseResult.class)) {
                 // 设置此请求返回体，需要包装，往下传递，在ResponseBodyAdvice接口进行判断
-                request.setAttribute(ApiConfigConsts.RESPONSE_RESULT_ANN, method.getAnnotation(ResponseResult.class));
+                request.setAttribute(ApiConfigConstants.RESPONSE_RESULT_ANN, method.getAnnotation(ResponseResult.class));
             }
         }
         return true;

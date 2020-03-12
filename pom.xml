@@ -12,6 +12,13 @@
     <inceptionYear>2019</inceptionYear>
     <description>应用基础框架</description>
 
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
     <developers>
         <developer>
             <name>luoxc</name>
@@ -19,8 +26,15 @@
             <roles>
                 <role>Owner</role>
             </roles>
+            <timezone>+8</timezone>
+            <url>https://github.com/lxc3219/suifeng</url>
         </developer>
     </developers>
+
+    <issueManagement>
+        <system>Github</system>
+        <url>https://github.com/lxc3219/suifeng/issues</url>
+    </issueManagement>
 
     <properties>
         <revision>1.0.0-RELEASE</revision>
@@ -38,8 +52,8 @@
         <module>suifeng-api</module>
         <module>suifeng-security</module>
         <module>suifeng-search</module>
-        <module>suifeng-admin</module>
         <module>suifeng-starter</module>
+        <module>suifeng-admin</module>
         <module>suifeng-demo</module>
         <module>suifeng-guide</module>
     </modules>

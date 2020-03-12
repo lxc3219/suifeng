@@ -29,7 +29,7 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <scope>compile</scope>
+            <scope>provided</scope>
         </dependency>
         <!-- apache 工具包 -->
         <dependency>
@@ -105,9 +105,25 @@
             <artifactId>jackson-module-mrbean</artifactId>
         </dependency>
         <!-- word转PDF 破解版-->
-        <!--<dependency>
+        <dependency>
             <groupId>com.aspose.words</groupId>
             <artifactId>aspose-words-jdk16</artifactId>
-        </dependency>-->
+            <version>16.8.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/aspose-words-jdk16-16.8.0.jar</systemPath>
+        </dependency>
     </dependencies>
+
+    <build>
+        <!--<resources>
+            &lt;!&ndash; 将 lib 目录下的依赖拷贝到 lib 目录下 &ndash;&gt;
+            <resource>
+                <directory>lib</directory>
+                <includes>
+                    <include>**/*.jar</include>
+                </includes>
+                <targetPath>${project.build.directory}/lib</targetPath>
+            </resource>
+        </resources>-->
+    </build>
 </project>

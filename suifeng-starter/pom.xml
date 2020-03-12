@@ -13,7 +13,7 @@
 	<packaging>pom</packaging>
 
 	<name>suifeng-starter</name>
-	<inceptionYear>2019</inceptionYear>
+	<inceptionYear>2020</inceptionYear>
 	<description>启动器模块</description>
 
 	<properties>

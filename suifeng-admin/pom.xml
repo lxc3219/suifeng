@@ -22,22 +22,7 @@
     <dependencies>
         <dependency>
             <groupId>org.suifeng.baseframework</groupId>
-            <artifactId>suifeng-core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.suifeng.baseframework</groupId>
-            <artifactId>suifeng-common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.suifeng.baseframework</groupId>
-            <artifactId>suifeng-api</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.suifeng.baseframework</groupId>
-            <artifactId>suifeng-model</artifactId>
+            <artifactId>suifeng-spring-boot-starter</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

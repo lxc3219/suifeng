@@ -1,7 +1,7 @@
 package org.suifeng.baseframework.api.result;
 
 import org.suifeng.baseframework.api.common.domain.CommonResult;
-import org.suifeng.baseframework.api.constant.ApiConfigConsts;
+import org.suifeng.baseframework.api.constant.ApiConfigConstants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.MethodParameter;
@@ -42,7 +42,7 @@ public class ResultResponseBodyAdvice implements ResponseBodyAdvice<Object> {
         ServletRequestAttributes sra = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes());
         HttpServletRequest request = sra.getRequest();
         // 判断请求，是否有包装标记
-        Object ann = request.getAttribute(ApiConfigConsts.RESPONSE_RESULT_ANN);
+        Object ann = request.getAttribute(ApiConfigConstants.RESPONSE_RESULT_ANN);
         return ann == null ? false : true;
     }
 
