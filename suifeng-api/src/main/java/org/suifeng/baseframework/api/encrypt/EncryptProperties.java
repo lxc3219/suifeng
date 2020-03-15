@@ -3,7 +3,6 @@ package org.suifeng.baseframework.api.encrypt;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-@Component
 @ConfigurationProperties(prefix = "api.encrypt")
 public class EncryptProperties {
 	/**

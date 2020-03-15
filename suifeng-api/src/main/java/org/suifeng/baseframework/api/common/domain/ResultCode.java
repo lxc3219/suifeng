@@ -1,18 +1,18 @@
 package org.suifeng.baseframework.api.common.domain;
 
-import org.suifeng.baseframework.api.common.enums.BaseExceptionEnum;
+import org.suifeng.baseframework.model.base.BaseExceptionEnum;
 
 
 public class ResultCode implements BaseExceptionEnum {
 
     private Integer code;
-    private String msg;
+    private String message;
 
     public ResultCode() {};
 
-    public ResultCode(Integer code, String msg) {
+    public ResultCode(Integer code, String message) {
         this.code = code;
-        this.msg = msg;
+        this.message = message;
     }
 
     @Override
@@ -21,7 +21,7 @@ public class ResultCode implements BaseExceptionEnum {
     }
 
     @Override
-    public String getMsg() {
-        return this.msg;
+    public String getMessage() {
+        return this.message;
     }
 }

@@ -1,6 +1,7 @@
 package org.suifeng.baseframework.api.common.exception;
 
-import org.suifeng.baseframework.api.common.enums.BaseExceptionEnum;
+import org.suifeng.baseframework.model.base.BaseException;
+import org.suifeng.baseframework.model.base.BaseExceptionEnum;
 import org.springframework.http.HttpStatus;
 
 /**

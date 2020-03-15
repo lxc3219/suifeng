@@ -1,5 +1,7 @@
 package org.suifeng.baseframework.api.common.enums;
 
+import org.suifeng.baseframework.model.base.BaseExceptionEnum;
+
 /**
  * 返回编码枚举类
  * TODO 待梳理
@@ -32,11 +34,11 @@ public enum ResultEnum implements BaseExceptionEnum {
     SERVICE_UNAVAILABLE(503, "服务器无法处理请求");
 
     private Integer code;
-    private String msg;
+    private String message;
 
-    ResultEnum(Integer code, String msg) {
+    ResultEnum(Integer code, String message) {
         this.code = code;
-        this.msg = msg;
+        this.message = message;
     }
 
     @Override
@@ -49,11 +51,11 @@ public enum ResultEnum implements BaseExceptionEnum {
     }
 
     @Override
-    public String getMsg() {
-        return msg;
+    public String getMessage() {
+        return message;
     }
 
-    public void setMsg(String msg) {
-        this.msg = msg;
+    public void setMessage(String msg) {
+        this.message = message;
     }
 }

@@ -1,6 +1,7 @@
 package org.suifeng.baseframework.api.common.exception;
 
-import org.suifeng.baseframework.api.common.enums.BaseExceptionEnum;
+import org.suifeng.baseframework.model.base.BaseException;
+import org.suifeng.baseframework.model.base.BaseExceptionEnum;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,7 +12,7 @@ import lombok.Setter;
  */
 @Setter
 @Getter
-public class BizException extends BaseException  {
+public class BizException extends BaseException {
 
     public BizException(BaseExceptionEnum baseExceptionEnum) {
         super(baseExceptionEnum);

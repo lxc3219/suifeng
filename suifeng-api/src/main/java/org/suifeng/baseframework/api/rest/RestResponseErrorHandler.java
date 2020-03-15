@@ -5,13 +5,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.client.ClientHttpResponse;
-import org.springframework.stereotype.Component;
 import org.springframework.web.client.DefaultResponseErrorHandler;
-
 import java.io.IOException;
 
+/**
+ * 接口响应错误处理器，用于将接口返回的错误信息转换成 RestException
+ * @author luoxc
+ */
 @Slf4j
-@Component
 public class RestResponseErrorHandler extends DefaultResponseErrorHandler {
 
 	/**
@@ -26,6 +27,5 @@ public class RestResponseErrorHandler extends DefaultResponseErrorHandler {
 		String body = IOUtils.toString(response.getBody(), "UTF-8");
 		throw new RestException(statusCode, body);
 	}
-	
 
 }

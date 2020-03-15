@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import static org.suifeng.baseframework.api.common.helper.RestHelper.ok;
+import static org.suifeng.baseframework.api.result.RestHelper.ok;
 
-@RequestMapping("/demo/response/result")
+@RequestMapping("/response/result")
 @Controller
 public class ResponseResultController {
 

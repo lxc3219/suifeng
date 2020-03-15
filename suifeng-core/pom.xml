@@ -21,6 +21,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.suifeng.baseframework</groupId>
             <artifactId>suifeng-common</artifactId>
             <version>${project.version}</version>

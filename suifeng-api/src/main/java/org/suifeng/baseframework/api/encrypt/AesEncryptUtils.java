@@ -1,7 +1,6 @@
 package org.suifeng.baseframework.api.encrypt;
 
 import org.apache.commons.codec.binary.Base64;
-
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.spec.SecretKeySpec;

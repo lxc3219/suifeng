@@ -7,11 +7,12 @@ import org.springframework.http.client.ClientHttpRequestExecution;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.http.client.support.HttpRequestWrapper;
-import org.springframework.stereotype.Component;
-
 import java.io.IOException;
 
-@Component
+/**
+ * 请求拦截器，自定义消息头
+ * @author luoxc
+ */
 @AllArgsConstructor
 @NoArgsConstructor
 public class HeaderRequestInterceptor implements ClientHttpRequestInterceptor {

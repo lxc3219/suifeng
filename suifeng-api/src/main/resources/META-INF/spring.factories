@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.suifeng.baseframework.api.swagger.SwaggerAutoConfiguration,\
+org.suifeng.baseframework.api.result.ResultAutoConfiguration,\
+org.suifeng.baseframework.api.rest.RestAutoConfiguration,\
+org.suifeng.baseframework.api.exception.ExceptionAutoConfiguration,\
+org.suifeng.baseframework.api.encrypt.EncryptAutoConfiguration

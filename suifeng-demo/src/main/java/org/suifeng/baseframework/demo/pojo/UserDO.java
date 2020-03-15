@@ -1,6 +1,6 @@
 package org.suifeng.baseframework.demo.pojo;
 
-import org.suifeng.baseframework.model.dataobject.BaseDO;
+import org.suifeng.baseframework.model.base.BaseDO;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

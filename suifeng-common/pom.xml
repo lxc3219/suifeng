@@ -47,6 +47,21 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <!-- ehcache -->
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
         <!-- 处理io流 -->
         <dependency>
             <groupId>commons-io</groupId>
@@ -113,17 +128,4 @@
             <systemPath>${project.basedir}/lib/aspose-words-jdk16-16.8.0.jar</systemPath>
         </dependency>
     </dependencies>
-
-    <build>
-        <!--<resources>
-            &lt;!&ndash; 将 lib 目录下的依赖拷贝到 lib 目录下 &ndash;&gt;
-            <resource>
-                <directory>lib</directory>
-                <includes>
-                    <include>**/*.jar</include>
-                </includes>
-                <targetPath>${project.build.directory}/lib</targetPath>
-            </resource>
-        </resources>-->
-    </build>
 </project>

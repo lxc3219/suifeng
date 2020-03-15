@@ -7,9 +7,10 @@
         <groupId>org.suifeng.baseframework</groupId>
         <artifactId>suifeng-parent</artifactId>
         <version>1.0.0-RELEASE</version>
-        <relativePath>../suifeng-parent</relativePath>
+        <relativePath/>
     </parent>
     <artifactId>suifeng-demo</artifactId>
+    <packaging>jar</packaging>
 
     <name>suifeng-demo</name>
     <inceptionYear>2019</inceptionYear>
@@ -22,7 +23,7 @@
     <dependencies>
         <dependency>
             <groupId>org.suifeng.baseframework</groupId>
-            <artifactId>suifeng-admin</artifactId>
+            <artifactId>suifeng-spring-boot-starter</artifactId>
             <version>${project.version}</version>
             <exclusions>
                 <exclusion>
@@ -90,30 +91,10 @@
     </dependencies>
 
     <build>
-        <finalName>suifeng-demo</finalName>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>

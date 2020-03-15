@@ -1,4 +1,4 @@
-#接口相关配置
+# 接口相关配置
 - restful接口
     - 是否启用rest：
         - 开启：api.rest.enabled: true

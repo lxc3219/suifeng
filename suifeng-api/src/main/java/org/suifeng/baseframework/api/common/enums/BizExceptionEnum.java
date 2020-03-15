@@ -1,5 +1,7 @@
 package org.suifeng.baseframework.api.common.enums;
 
+import org.suifeng.baseframework.model.base.BaseExceptionEnum;
+
 /**
  * 业务异常枚举类
  * TODO 待梳理
@@ -72,11 +74,11 @@ public enum BizExceptionEnum implements BaseExceptionEnum {
 
     private Integer code;
 
-    private String msg;
+    private String message;
 
-    BizExceptionEnum(Integer code, String msg) {
+    BizExceptionEnum(Integer code, String message) {
         this.code = code;
-        this.msg = msg;
+        this.message = message;
     }
 
     @Override
@@ -89,12 +91,12 @@ public enum BizExceptionEnum implements BaseExceptionEnum {
     }
 
     @Override
-    public String getMsg() {
-        return msg;
+    public String getMessage() {
+        return message;
     }
 
-    public void setMsg(String msg) {
-        this.msg = msg;
+    public void setMessage(String msg) {
+        this.message = message;
     }
 
 }

@@ -18,4 +18,11 @@
     <properties>
         <main.basedir>${basedir}/..</main.basedir>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
+    </dependencies>
 </project>

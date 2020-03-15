@@ -1,6 +1,7 @@
 package org.suifeng.baseframework.api.common.exception;
 
 import org.suifeng.baseframework.api.common.enums.ResultEnum;
+import org.suifeng.baseframework.model.base.BaseException;
 
 /**
  * 参数异常

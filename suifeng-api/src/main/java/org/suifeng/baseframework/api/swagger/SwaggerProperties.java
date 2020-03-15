@@ -1,18 +1,19 @@
 package org.suifeng.baseframework.api.swagger;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.suifeng.baseframework.api.swagger.domain.*;
-import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
-import org.suifeng.baseframework.api.swagger.domain.*;
-
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-@Data
-@Component
+/**
+ * Swagger配置信息
+ */
+@Getter
+@Setter
 @ConfigurationProperties(prefix = "api.swagger")
 public class SwaggerProperties {
 

@@ -1,7 +1,7 @@
 package org.suifeng.baseframework.common.util;
 
 
-import org.suifeng.baseframework.model.enums.SensitiveTypeEnum;
+import org.suifeng.baseframework.common.enums.SensitiveTypeEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 

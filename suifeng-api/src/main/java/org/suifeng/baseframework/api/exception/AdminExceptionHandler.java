@@ -3,15 +3,13 @@ package org.suifeng.baseframework.api.exception;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONException;
 import com.google.common.collect.Maps;
-import org.suifeng.baseframework.api.common.properties.ErrorViewProperties;
 import org.suifeng.baseframework.api.common.domain.CommonResult;
 import org.suifeng.baseframework.api.common.enums.ResultEnum;
 import org.suifeng.baseframework.api.common.exception.BizException;
-import org.suifeng.baseframework.api.common.helper.RestHelper;
+import org.suifeng.baseframework.api.result.RestHelper;
 import org.suifeng.baseframework.common.helper.ParamHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -32,7 +30,6 @@ import java.util.Map;
  */
 @Slf4j
 @ControllerAdvice
-@ConditionalOnProperty(prefix = "api.exception", name = "type", havingValue = "admin")
 public class AdminExceptionHandler {
 
     private static final String STATUS = "status";
@@ -76,7 +73,7 @@ public class AdminExceptionHandler {
     @ResponseBody
     public CommonResult unknowError(RuntimeException e) {
         log.error("运行时异常:", e);
-        return RestHelper.error(ResultEnum.SERVICE_EXCEPTION.getCode(), ResultEnum.SERVICE_EXCEPTION.getMsg());
+        return RestHelper.error(ResultEnum.SERVICE_EXCEPTION.getCode(), ResultEnum.SERVICE_EXCEPTION.getMessage());
     }
 
     /**

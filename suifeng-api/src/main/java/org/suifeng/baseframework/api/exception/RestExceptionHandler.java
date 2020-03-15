@@ -3,10 +3,9 @@ package org.suifeng.baseframework.api.exception;
 import org.suifeng.baseframework.api.common.domain.*;
 import org.suifeng.baseframework.api.common.exception.BizException;
 import org.suifeng.baseframework.api.common.exception.RestException;
-import org.suifeng.baseframework.api.common.helper.RestHelper;
+import org.suifeng.baseframework.api.result.RestHelper;
 import org.suifeng.baseframework.api.constant.MediaTypes;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -21,7 +20,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.WebRequest;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
@@ -32,7 +30,6 @@ import java.util.List;
  */
 @Slf4j
 @ControllerAdvice
-@ConditionalOnProperty(prefix = "api.exception", name = "type", havingValue = "rest")
 public class RestExceptionHandler {
 
 	@ExceptionHandler(MethodArgumentNotValidException.class)
