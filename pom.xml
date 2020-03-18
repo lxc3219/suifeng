@@ -48,12 +48,12 @@
         <module>suifeng-core</module>
         <module>suifeng-ui</module>
         <module>suifeng-resource</module>
-        <module>suifeng-generator</module>
         <module>suifeng-api</module>
         <module>suifeng-security</module>
         <module>suifeng-search</module>
-        <module>suifeng-starter</module>
+        <module>suifeng-generator</module>
         <module>suifeng-admin</module>
+        <module>suifeng-starter</module>
         <module>suifeng-demo</module>
         <module>suifeng-guide</module>
     </modules>
