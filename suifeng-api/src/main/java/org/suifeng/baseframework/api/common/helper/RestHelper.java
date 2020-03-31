@@ -1,4 +1,4 @@
-package org.suifeng.baseframework.api.result;
+package org.suifeng.baseframework.api.common.helper;
 
 import org.suifeng.baseframework.model.vo.CommonResult;
 import org.suifeng.baseframework.model.base.BaseExceptionEnum;
