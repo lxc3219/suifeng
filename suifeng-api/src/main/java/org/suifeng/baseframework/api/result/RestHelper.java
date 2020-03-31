@@ -1,6 +1,6 @@
 package org.suifeng.baseframework.api.result;
 
-import org.suifeng.baseframework.api.common.domain.CommonResult;
+import org.suifeng.baseframework.model.vo.CommonResult;
 import org.suifeng.baseframework.model.base.BaseExceptionEnum;
 import org.springframework.http.HttpStatus;
 import javax.servlet.http.HttpServletRequest;
@@ -31,34 +31,34 @@ public class RestHelper {
 
     /**
      * 请求处理失败（默认500错误）
-     * @param msg 调用结果消息
+     * @param message 调用结果消息
      * @param <T>
      * @return
      */
-    public static <T> CommonResult<T> error(String msg) {
-        return error(HttpStatus.INTERNAL_SERVER_ERROR.value(), msg);
+    public static <T> CommonResult<T> error(String message) {
+        return error(HttpStatus.INTERNAL_SERVER_ERROR.value(), message);
     }
 
     /**
      * 请求处理失败
      * @param status 状态码
-     * @param msg 调用结果消息
+     * @param message 调用结果消息
      * @param <T>
      * @return
      */
-    public static <T> CommonResult<T> error(Integer status, String msg) {
-        return error(status, null, msg);
+    public static <T> CommonResult<T> error(Integer status, String message) {
+        return error(status, null, message);
     }
 
     /**
      * 业务处理失败（默认500错误）
      * @param code 业务代码
-     * @param msg 调用结果消息
+     * @param message 调用结果消息
      * @param <T>
      * @return
      */
-    public static <T> CommonResult<T> bizError(Integer code, String msg) {
-        return error(HttpStatus.INTERNAL_SERVER_ERROR.value(), code, msg);
+    public static <T> CommonResult<T> bizError(Integer code, String message) {
+        return error(HttpStatus.INTERNAL_SERVER_ERROR.value(), code, message);
     }
 
     /**
@@ -75,16 +75,16 @@ public class RestHelper {
      * 请求处理失败
      * @param status 状态码
      * @param code 业务代码
-     * @param msg 调用结果消息
+     * @param message 调用结果消息
      * @param <T>
      * @return
      */
-    public static <T> CommonResult<T> error(Integer status, Integer code, String msg) {
+    public static <T> CommonResult<T> error(Integer status, Integer code, String message) {
         return new CommonResult<T>()
                 .success(Boolean.FALSE)
                 .status(status)
                 .code(code)
-                .msg(msg)
+                .message(message)
                 .putTimeStamp();
     }
 

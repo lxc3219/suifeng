@@ -9,17 +9,17 @@ import org.springframework.context.annotation.Configuration;
 @ConditionalOnProperty(prefix = "api.result", name = "enabled", havingValue = "true")
 public class ResultAutoConfiguration {
 
-    @Bean
-    @ConditionalOnMissingBean(ResultHandlerInterceptor.class)
-    public ResultHandlerInterceptor resultHandlerInterceptor() {
-        return new ResultHandlerInterceptor();
-    }
+//    @Bean
+//    @ConditionalOnMissingBean(ResultHandlerInterceptor.class)
+//    public ResultHandlerInterceptor resultHandlerInterceptor() {
+//        return new ResultHandlerInterceptor();
+//    }
 
-    @Bean
-    @ConditionalOnMissingBean(ResultWebMvcConfigurer.class)
-    public ResultWebMvcConfigurer resultWebMvcConfigurer() {
-        return new ResultWebMvcConfigurer();
-    }
+//    @Bean
+//    @ConditionalOnMissingBean(ResultWebMvcConfigurer.class)
+//    public ResultWebMvcConfigurer resultWebMvcConfigurer() {
+//        return new ResultWebMvcConfigurer();
+//    }
 
     @Bean
     @ConditionalOnMissingBean(ResultResponseBodyAdvice.class)
