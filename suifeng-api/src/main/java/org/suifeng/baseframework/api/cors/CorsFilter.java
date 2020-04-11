@@ -1,4 +1,4 @@
-package org.suifeng.baseframework.api.cros;
+package org.suifeng.baseframework.api.cors;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;

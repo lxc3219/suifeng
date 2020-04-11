@@ -12,7 +12,6 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 import org.suifeng.baseframework.api.result.annotation.ResponseResult;
 import org.suifeng.baseframework.api.result.annotation.RestResponseResult;
 import org.suifeng.baseframework.model.vo.CommonResult;
-
 import static org.suifeng.baseframework.api.common.helper.RestHelper.ok;
 
 /**

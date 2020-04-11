@@ -2,11 +2,13 @@ package org.suifeng.baseframework.api.rest;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 
+/**
+ * Http 请求配置
+ * @author luoxc
+ */
 @Setter
 @Getter
-@ConfigurationProperties(prefix = "api.rest.http")
 public class HttpRequestProperties {
 
     /**

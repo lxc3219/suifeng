@@ -1,4 +1,4 @@
-package org.suifeng.baseframework.api.cros;
+package org.suifeng.baseframework.api.cors;
 
 
 import org.springframework.boot.web.servlet.FilterRegistrationBean;

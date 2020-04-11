@@ -14,9 +14,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class ResponseResultProperties {
 
     /**
-     * 是否启用返回体自动包装
+     * 启用返回体自动包装开关，默认开启
      */
-    private boolean enabled;
+    private boolean enabled = true;
 
     /**
      * 启动注解配置：true，启用注解；false，禁用注解

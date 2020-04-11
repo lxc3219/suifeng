@@ -47,6 +47,11 @@ public class FastJsonConfiguration implements WebMvcConfigurer {
         List<MediaType> fastMediaTypes = new ArrayList<>();
         fastMediaTypes.add(MediaType.APPLICATION_JSON_UTF8);
         fastConverter.setSupportedMediaTypes(fastMediaTypes);
-        converters.add(fastConverter);
+        /*
+         * SpringBoot 2.0.1版本中加载WebMvcConfigurer的顺序发生了变动，故需使用converters.add(0, converter);
+         * 指定FastJsonHttpMessageConverter在converters内的顺序，否则在SpringBoot 2.0.1及之后的版本中将优先使用Jackson处理。
+         * 当然也可以移除 jackson 消息转换器
+         */
+        converters.add(0, fastConverter);
     }
 }

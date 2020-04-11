@@ -5,7 +5,6 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.ClientHttpRequestFactory;
@@ -23,7 +22,6 @@ import java.util.List;
 
 
 @Configuration
-@EnableConfigurationProperties(HttpRequestProperties.class)
 public class RestTemplateConfiguration {
 
     @Autowired
@@ -35,7 +33,6 @@ public class RestTemplateConfiguration {
 
     /**
      * 使用RestTemplateBuilder来实例化RestTemplate对象
-     * @createTime 2019/6/1 22:34
      * @author luoxc
      */
     @Bean
@@ -52,7 +49,6 @@ public class RestTemplateConfiguration {
 
     /**
      * 创建HTTP客户端工厂
-     * @createTime 2019/6/1 22:34
      * @author luoxc
      */
     private ClientHttpRequestFactory createFactory() {
@@ -72,7 +68,6 @@ public class RestTemplateConfiguration {
 
     /**
      * 重新初始化MessageConverter
-     * @createTime 2019/6/1 22:34
      * @author luoxc
      */
     private void reInitMessageConverter(RestTemplate restTemplate) {
@@ -108,7 +103,6 @@ public class RestTemplateConfiguration {
 
     /**
      * 初始化RestTemplate,并加入spring的Bean工厂，由spring统一管理
-     * @createTime 2019/6/1 22:34
      * @author luoxc
      */
     public RestTemplate getRestTemplate() {

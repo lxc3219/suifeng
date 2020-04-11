@@ -20,9 +20,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 使用spring的restTemplate替代httpClient工具
- * 支持json返回格式
- * TODO 后续支持xml格式数据
+ * 使用 spring 的 restTemplate替代 httpClient 工具
+ * 支持 json 返回格式
  * @author luoxc
  */
 @Slf4j

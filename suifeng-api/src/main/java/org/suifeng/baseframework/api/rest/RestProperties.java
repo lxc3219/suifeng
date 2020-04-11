@@ -10,13 +10,18 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class RestProperties {
 
 	/**
-	 * 是否启用rest
+	 * 启用开关，默认 false
 	 */
-	private Boolean enabled;
+	private boolean enabled;
 
 	/**
 	 * 接口服务器地址
 	 */
 	private String serverAddr;
+
+	/**
+	 * Http 请求配置
+	 */
+	private HttpRequestProperties http;
 
 }
