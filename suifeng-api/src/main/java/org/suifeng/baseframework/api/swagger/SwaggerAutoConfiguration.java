@@ -26,6 +26,7 @@ import java.util.List;
  * Swagger配置
  * TODO 文档分组配置
  * @author luoxc
+ * @since 1.0.0
  */
 @Configuration
 @EnableSwagger2

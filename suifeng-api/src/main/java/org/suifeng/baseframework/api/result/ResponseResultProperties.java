@@ -7,6 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * 返回体统一包装配置类
  * @author luoxc
+ * @since 1.0.0
  */
 @Setter
 @Getter

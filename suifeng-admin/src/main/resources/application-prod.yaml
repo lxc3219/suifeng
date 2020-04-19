@@ -1,0 +1,20 @@
+# 生产运行环境
+spring:
+  datasource:
+    dynamic:
+      # sql语句格式化，默认false，建议线上关闭
+      p6spy: false
+      primary: suifeng
+      datasource:
+        # 默认数据库（台州掌上交通数据库）
+        tzydb:
+          username: root
+          password: root
+          url: jdbc:mysql://localhost:3306/suifeng?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&serverTimezone=GMT%2B8
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          druid: #这里可以重写默认值
+            validation-query: select 1 from DUAL
+
+api:
+  swagger:
+    enabled: false

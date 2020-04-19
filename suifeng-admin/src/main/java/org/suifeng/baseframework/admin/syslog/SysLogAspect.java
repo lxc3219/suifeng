@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 
 /**
  * 系统日志，切面处理类
- * @createTime 2019/6/2 10:57
  * @author luoxc
+ * @since 1.0.0
  */
 @Aspect
 @Component

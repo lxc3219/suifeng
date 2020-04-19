@@ -18,8 +18,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 /**
  * 请求响应处理类
  * 对加了@Encrypt的方法的数据进行加密操作
- * @createTime 2019/6/9 23:43
  * @author luoxc
+ * @since 1.0.0
  */
 @Slf4j
 @Order(99)

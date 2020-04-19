@@ -1,0 +1,43 @@
+# 开发运行环境
+spring:
+  datasource:
+    dynamic:
+      # sql语句格式化，默认false，建议线上关闭
+      p6spy: true
+      primary: tzydb
+      datasource:
+        # 默认数据库（台州掌上交通数据库）
+        tzydb:
+          username: root
+          password: root
+          # 192.168.1.188:3306
+          url: jdbc:mysql://localhost:3306/tzydb?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&serverTimezone=GMT%2B8
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          druid: #这里可以重写默认值
+            validation-query: select 1 from DUAL
+        # 运政数据库
+#        zjyzgl:
+#          username: db2admin
+#          password: zjyg_123
+#          url: jdbc:db2://10.100.32.188:50000/zjyzgl
+#          driver-class-name: com.ibm.db2.jcc.DB2Driver
+#          druid: #这里可以重写默认值
+#            validation-query: select 1 from SYSIBM.SYSDUMMY1
+
+  thymeleaf:
+    # 禁用缓存
+    cache: false
+
+  # 同一时间只能运行一个LiveRload server，默认端口35729
+  devtools:
+    livereload:
+      port: 35730
+
+# 文件上传配置
+file:
+  upload:
+    upload-path: D:\fileUpload
+
+api:
+  swagger:
+    enabled: false

@@ -1,0 +1,131 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /${spring.application.name}
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 1000
+    min-spare-threads: 30
+
+spring:
+  # 环境 dev|prod
+  profiles:
+    active: dev
+
+  application:
+    name: suifeng-admin
+
+  messages:
+    # 国际化资源文件路径
+    basename: i18n/messages
+
+  mvc:
+    view:
+      suffix: .html
+
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+  # 开启静态资源缓存，通过资源的MD5生成版本号
+#  resources:
+#    chain:
+#      cache: true
+#      enabled: true
+#      compressed: true
+#        strategy:
+#        content:
+#          enabled: true
+#          paths: /**
+
+  thymeleaf:
+    enabled: true
+    prefix: classpath:/views/
+
+  datasource:
+    dynamic:
+      druid: #以下是全局默认值，可以全局更改
+        # allowMultiQueries: true
+        # multiStatementAllow: true
+        # 配置初始化大小、最小、最大
+        initial-size: 5
+        min-idle: 5
+        max-active: 40
+        # 配置获取连接等待超时的时间
+        max-wait: 60000
+        # 打开PSCache，并且指定每个连接上PSCache的大小（oracle配置为true，mysql配置为false）
+        pool-prepared-statements: false
+        max-pool-prepared-statement-per-connection-size: 20
+        #validation-query: select 1 from DUAL
+        test-while-idle: true
+        test-on-borrow: false
+        test-on-return: false
+        # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+        time-between-eviction-runs-millis: 60000
+        # 配置一个连接在池中最小生存的时间，单位是毫秒
+        min-evictable-idle-time-millis: 300000
+        # 配置监控统计拦截的filters，监控统计用的filter:stat，日志用的filter:log4j，防御sql注入的filter:wall
+        filters: stat, slf4j
+        # 通过connectProperties属性来打开mergeSql功能，慢SQL记录
+        connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=3000
+        # 合并多个DruidDataSource的监控数据
+        use-global-data-source-stat: true
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/**/*Mapper.xml
+  type-aliases-package: org.suifeng.baseframework.admin.modules.*.entity
+  # 驼峰命名规范,如：数据库字段是order_id,那么实体字段就要写成 orderId,xx-mapper.xml中的resultMap的映射可以省略掉了
+  configuration:
+    map-underscore-to-camel-case: true
+
+# 应用配置
+local-app-url: http://localhost:${server.port}/${spring.application.name}/
+
+#################api conf begin####################
+api:
+  # 接口配置
+  rest:
+    enabled: true
+    http:
+      max-conn-total: 1000
+      max-conn-per-route: 1000
+      connect-timeout: 3000
+      read-timeout: 30000
+
+  # 返回体配置
+  result:
+    enabled: true
+
+  # 统一异常配置
+  exception:
+    type: rest
+#################api conf end######################
+
+resource:
+  resourceHandler:
+    '[doc.html]': classpath:/META-INF/resources/
+    '[/webjars/**]': classpath:/META-INF/resources/webjars/
+    '[/**]': classpath:/META-INF/resources/static/,classpath:/static/
+
+
+
+# 验证码
+kaptcha:
+  height: 50
+  width: 200
+  content:
+    length: 4
+    source: abcdefghjklmnopqrstuvwxyz23456789
+    space: 2
+  font:
+    color: black
+    name: Arial
+    size: 40
+  background-color:
+    from: lightGray
+    to: white
+  border:
+    enabled: true
+    color: black
+    thickness: 1

@@ -6,6 +6,7 @@ import lombok.Setter;
 /**
  * Http 请求配置
  * @author luoxc
+ * @since 1.0.0
  */
 @Setter
 @Getter

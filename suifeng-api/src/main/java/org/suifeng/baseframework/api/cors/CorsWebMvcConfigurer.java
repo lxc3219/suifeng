@@ -9,6 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 /**
  * Web配置类
  * @author luoxc
+ * @since 1.0.0
  */
 @Configuration
 public class CorsWebMvcConfigurer implements WebMvcConfigurer {

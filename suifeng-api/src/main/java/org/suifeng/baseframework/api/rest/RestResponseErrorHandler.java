@@ -11,14 +11,15 @@ import java.io.IOException;
 /**
  * 接口响应错误处理器，用于将接口返回的错误信息转换成 RestException
  * @author luoxc
+ * @since 1.0.0
  */
 @Slf4j
 public class RestResponseErrorHandler extends DefaultResponseErrorHandler {
 
 	/**
 	 * 重写handleError，抛出RestException
-	 * @createTime 2019/6/1 20:06
 	 * @author luoxc
+	 * @since 1.0.0
 	 */
 	@Override
 	public void handleError(ClientHttpResponse response) throws IOException {

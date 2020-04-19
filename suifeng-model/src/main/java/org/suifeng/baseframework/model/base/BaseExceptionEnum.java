@@ -3,6 +3,7 @@ package org.suifeng.baseframework.model.base;
 /**
  * 异常枚举基类
  * @author luoxc
+ * @since 1.0.0
  */
 public interface BaseExceptionEnum {
 

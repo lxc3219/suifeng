@@ -22,8 +22,8 @@ import java.util.Map;
 
 /**
  * 全局异常捕获
- * @createTime 2019/5/29 12:22
  * @author luoxc
+ * @since 1.0.0
  */
 @Slf4j
 @ControllerAdvice
@@ -77,8 +77,8 @@ public class AdminExceptionHandler {
      * 系统错误
      * @param request, response, e
      * @return
-     * @createTime 2019/5/24 13:50
      * @author luoxc
+     * @since 1.0.0
      */
     @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
@@ -96,8 +96,8 @@ public class AdminExceptionHandler {
      * 返回json
      * @param request, response, result
      * @return
-     * @createTime 2019/5/24 13:40
      * @author luoxc
+     * @since 1.0.0
      */
     private ModelAndView handleWithoutView(HttpServletRequest request,
                                            HttpServletResponse response,
@@ -121,8 +121,8 @@ public class AdminExceptionHandler {
      * 跳转到error页面
      * @param request, status, msg
      * @return
-     * @createTime 2019/5/24 13:06
      * @author luoxc
+     * @since 1.0.0
      */
     private ModelAndView toErrorView(HttpServletRequest request, Integer status, String msg) {
         Map<String, Object> result = ParamHelper.getParam(request);
@@ -136,8 +136,8 @@ public class AdminExceptionHandler {
      * 返回页面
      * @param result, viewName
      * @return
-     * @createTime 2019/5/24 13:12
      * @author luoxc
+     * @since 1.0.0
      */
     private ModelAndView handleWithView(Map<String, Object> result, String viewName) {
         ModelAndView modelAndView = new ModelAndView();

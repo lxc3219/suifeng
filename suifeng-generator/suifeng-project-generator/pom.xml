@@ -7,7 +7,6 @@
         <groupId>org.suifeng.baseframework</groupId>
         <artifactId>suifeng-generator</artifactId>
         <version>1.0.0-RELEASE</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>suifeng-project-generator</artifactId>
 

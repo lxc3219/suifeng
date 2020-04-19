@@ -12,6 +12,7 @@ import java.io.IOException;
 /**
  * 请求拦截器，自定义消息头
  * @author luoxc
+ * @since 1.0.0
  */
 @AllArgsConstructor
 @NoArgsConstructor

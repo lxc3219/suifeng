@@ -7,11 +7,11 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
-* 系统日志注解
-* 常用于方法上，用于记录当前操作日志
-* @createTime 2019/6/1 18:36
-* @author luoxc
-*/
+ * 系统日志注解
+ * 常用于方法上，用于记录当前操作日志
+ * @author luoxc
+ * @since 1.0.0
+ */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented

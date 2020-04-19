@@ -3,6 +3,7 @@ package org.suifeng.baseframework.model.base;
 /**
  * 异常基类
  * @author luoxc
+ * @since 1.0.0
  */
 public class BaseException extends RuntimeException {
 
@@ -17,7 +18,7 @@ public class BaseException extends RuntimeException {
     }
 
     public BaseException(String message) {
-        this(null, message);
+        super(message);
     }
 
     public BaseException(Integer code, String message) {
@@ -26,11 +27,11 @@ public class BaseException extends RuntimeException {
     }
 
     public BaseException(Throwable cause) {
-        this(null, cause);
+        super(cause);
     }
 
     public BaseException(String message, Throwable cause) {
-        this(null, message, cause);
+        super(message, cause);
     }
 
     public BaseException(Integer code, String message, Throwable cause) {

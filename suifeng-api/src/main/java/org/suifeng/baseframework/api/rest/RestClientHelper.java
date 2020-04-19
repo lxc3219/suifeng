@@ -23,6 +23,7 @@ import java.util.Map;
  * 使用 spring 的 restTemplate替代 httpClient 工具
  * 支持 json 返回格式
  * @author luoxc
+ * @since 1.0.0
  */
 @Slf4j
 public class RestClientHelper {
@@ -244,8 +245,8 @@ public class RestClientHelper {
      * 请求中若带MultipartFile，需将请求参数转换成MultiValueMap<String, Object>
      * @param key, val
      * @return
-     * @createTime 2019/6/20 10:06
      * @author luoxc
+     * @since 1.0.0
      */
     public static MultiValueMap<String, Object> convert(@NotBlank String key, Object val) {
         MultiValueMap<String, Object> multiValueMap = new LinkedMultiValueMap<>();
@@ -264,8 +265,8 @@ public class RestClientHelper {
      * 请求中若带MultipartFile，需将请求参数转换成MultiValueMap<String, Object>
      * @param variables
      * @return
-     * @createTime 2019/6/20 10:06
      * @author luoxc
+     * @since 1.0.0
      */
     public static MultiValueMap<String, Object> convert(Map<String, Object> variables) {
         if (variables == null) {
@@ -287,8 +288,8 @@ public class RestClientHelper {
      * multipartfile文件要经过转换，才能使用restTemplate操作
      * @param multiValueMap, key, vals
      * @return
-     * @createTime 2019/6/18 16:51
      * @author luoxc
+     * @since 1.0.0
      */
     public static void multipartFileConvert(MultiValueMap<String,Object> multiValueMap, @NotBlank String key, MultipartFile val) {
         if (val != null) {

@@ -5,8 +5,8 @@ import org.suifeng.baseframework.model.base.BaseExceptionEnum;
 /**
  * 接口异常枚举类
  * TODO 待梳理
- * @createTime 2019/5/26 11:29
  * @author luoxc
+ * @since 1.0.0
  */
 public enum RestExceptionEnum implements BaseExceptionEnum {
 

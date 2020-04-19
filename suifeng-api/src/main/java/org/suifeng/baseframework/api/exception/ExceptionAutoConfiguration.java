@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * 异常统一捕获自动配置类
  * @author luoxc
+ * @since 1.0.0
  */
 @Configuration
 @EnableConfigurationProperties(ErrorViewProperties.class)

@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * 返回体统一包装自动配置类
  * @author luoxc
+ * @since 1.0.0
  */
 @Configuration
 @ConditionalOnProperty(prefix = "api.result", name = "enabled", havingValue = "true")

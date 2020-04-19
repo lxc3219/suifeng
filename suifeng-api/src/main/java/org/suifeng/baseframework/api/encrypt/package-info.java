@@ -1,6 +1,6 @@
 /**
  * 数据加解密
- * @createTime 2019/6/9 22:01
  * @author luoxc
+ * @since 1.0.0
  */
 package org.suifeng.baseframework.api.encrypt;

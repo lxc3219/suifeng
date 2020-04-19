@@ -13,7 +13,7 @@
 
     <name>suifeng-model</name>
     <inceptionYear>2019</inceptionYear>
-    <description>通用实体，常量，枚举，异常等规范模块</description>
+    <description>通用实体，常量，枚举，异常，注解等通用模块</description>
 
     <properties>
         <main.basedir>${basedir}/..</main.basedir>
@@ -23,6 +23,19 @@
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>${swagger-annotations.version}</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson.version}</version>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 </project>

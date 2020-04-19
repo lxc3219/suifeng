@@ -17,6 +17,7 @@ import static org.suifeng.baseframework.api.common.helper.RestHelper.ok;
 /**
  * 返回体封装
  * @author luoxc
+ * @since 1.0.0
  */
 @Order(1)
 @ControllerAdvice

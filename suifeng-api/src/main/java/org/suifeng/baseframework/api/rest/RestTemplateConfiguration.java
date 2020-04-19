@@ -34,6 +34,7 @@ public class RestTemplateConfiguration {
     /**
      * 使用RestTemplateBuilder来实例化RestTemplate对象
      * @author luoxc
+     * @since 1.0.0
      */
     @Bean
     @ConditionalOnClass(value = {RestTemplate.class, HttpClient.class})
@@ -50,6 +51,7 @@ public class RestTemplateConfiguration {
     /**
      * 创建HTTP客户端工厂
      * @author luoxc
+     * @since 1.0.0
      */
     private ClientHttpRequestFactory createFactory() {
         if (httpRequestProperties.getMaxConnTotal() <= 0) {
@@ -69,6 +71,7 @@ public class RestTemplateConfiguration {
     /**
      * 重新初始化MessageConverter
      * @author luoxc
+     * @since 1.0.0
      */
     private void reInitMessageConverter(RestTemplate restTemplate) {
         List<HttpMessageConverter<?>> messageConverters = restTemplate.getMessageConverters();
@@ -104,6 +107,7 @@ public class RestTemplateConfiguration {
     /**
      * 初始化RestTemplate,并加入spring的Bean工厂，由spring统一管理
      * @author luoxc
+     * @since 1.0.0
      */
     public RestTemplate getRestTemplate() {
         RestTemplate restTemplate = new RestTemplate(this.createFactory());

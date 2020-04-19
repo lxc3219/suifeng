@@ -1,13 +1,13 @@
 package org.suifeng.baseframework.demo.responseresult;
 
-import org.suifeng.baseframework.api.common.annotation.ResponseResult;
-import org.suifeng.baseframework.api.common.domain.CommonResult;
+import org.suifeng.baseframework.api.result.annotation.ResponseResult;
+import org.suifeng.baseframework.model.vo.CommonResult;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import static org.suifeng.baseframework.api.result.RestHelper.ok;
+import static org.suifeng.baseframework.api.common.helper.RestHelper.ok;
 
 @RequestMapping("/response/result")
 @Controller

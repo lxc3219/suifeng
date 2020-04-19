@@ -4,8 +4,8 @@ import java.lang.annotation.*;
 
 /**
  * 权限注解
- * @createTime 2019/6/13 14:29
  * @author luoxc
+ * @since 1.0.0
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

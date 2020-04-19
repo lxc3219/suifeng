@@ -5,8 +5,8 @@ import org.suifeng.baseframework.model.base.BaseException;
 
 /**
  * 参数异常
- * @createTime 2019/6/2 11:59
  * @author luoxc
+ * @since 1.0.0
  */
 public class ParamException extends BaseException {
 

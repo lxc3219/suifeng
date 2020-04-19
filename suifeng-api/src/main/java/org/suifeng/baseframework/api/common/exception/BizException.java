@@ -6,6 +6,7 @@ import org.suifeng.baseframework.model.base.BaseExceptionEnum;
 /**
  * 业务异常
  * @author luoxc
+ * @since 1.0.0
  */
 public class BizException extends BaseException {
 

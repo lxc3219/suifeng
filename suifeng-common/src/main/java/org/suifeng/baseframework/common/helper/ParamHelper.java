@@ -7,8 +7,8 @@ import java.util.*;
 
 /**
  * 参数工具类
- * @createTime 2019/5/24 13:37
  * @author luoxc
+ * @since 1.0.0
  */
 public class ParamHelper {
 
@@ -16,8 +16,8 @@ public class ParamHelper {
 	 * get方法参数utf-8转码
 	 * @param request
 	 * @return
-	 * @createTime 2019/5/24 13:37
 	 * @author luoxc
+	 * @since 1.0.0
 	 */
 	public static Map<String, Object> getParam(HttpServletRequest request) {
 		String method = request.getMethod();

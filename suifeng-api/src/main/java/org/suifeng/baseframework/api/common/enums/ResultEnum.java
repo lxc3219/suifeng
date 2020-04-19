@@ -5,8 +5,8 @@ import org.suifeng.baseframework.model.base.BaseExceptionEnum;
 /**
  * 返回编码枚举类
  * TODO 待梳理
- * @createTime 2019/6/2 11:22
  * @author luoxc
+ * @since 1.0.0
  */
 public enum ResultEnum implements BaseExceptionEnum {
 

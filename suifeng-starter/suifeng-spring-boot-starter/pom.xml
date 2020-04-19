@@ -7,12 +7,11 @@
 		<groupId>org.suifeng.baseframework</groupId>
 		<artifactId>suifeng-starter</artifactId>
 		<version>1.0.0-RELEASE</version>
-		<relativePath/>
 	</parent>
 	<artifactId>suifeng-spring-boot-starter</artifactId>
 
 	<name>suifeng-spring-boot-starter</name>
-	<inceptionYear>2019</inceptionYear>
+	<inceptionYear>2020</inceptionYear>
 	<description>自动配置器模块</description>
 
 	<properties>
@@ -22,7 +21,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<artifactId>spring-boot-autoconfigure</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.suifeng.baseframework</groupId>

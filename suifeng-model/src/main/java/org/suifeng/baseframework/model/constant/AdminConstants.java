@@ -5,6 +5,7 @@ import org.suifeng.baseframework.model.base.BaseConstants;
 /**
  * 后台管理系统相关常量
  * @author luoxc
+ * @since 1.0.0
  */
 public class AdminConstants extends BaseConstants {
 

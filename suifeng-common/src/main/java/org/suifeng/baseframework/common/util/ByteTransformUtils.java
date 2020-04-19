@@ -9,7 +9,7 @@ public class ByteTransformUtils {
 	 * @CreateTime 2018年8月22日 下午12:30:05
 	 * @author luoxc
 	 * @version 1.0
-	 * @since JDK 1.7
+	 * @since 1.0.0
 	 */
 	public static String byteToStr(byte[] byteArray) {
 		String strDigest = "";
@@ -27,7 +27,7 @@ public class ByteTransformUtils {
 	 * @CreateTime 2018年8月22日 下午12:30:14
 	 * @author luoxc
 	 * @version 1.0
-	 * @since JDK 1.7
+	 * @since 1.0.0
 	 */
 	public static String byteToHexStr(byte mByte) {
 		char[] Digit = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
