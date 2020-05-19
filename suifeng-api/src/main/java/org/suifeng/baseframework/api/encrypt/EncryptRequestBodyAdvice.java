@@ -1,6 +1,6 @@
 package org.suifeng.baseframework.api.encrypt;
 
-import org.suifeng.baseframework.api.common.annotation.Decrypt;
+import org.suifeng.baseframework.api.encrypt.annotation.Decrypt;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;

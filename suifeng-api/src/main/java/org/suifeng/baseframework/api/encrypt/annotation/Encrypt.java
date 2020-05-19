@@ -1,4 +1,4 @@
-package org.suifeng.baseframework.api.common.annotation;
+package org.suifeng.baseframework.api.encrypt.annotation;
 
 import java.lang.annotation.*;
 

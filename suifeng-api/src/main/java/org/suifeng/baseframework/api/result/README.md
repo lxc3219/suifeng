@@ -1,19 +1,9 @@
 # api/result
-
-## 项目简介
-1.
-
-## 编译环境
-
-
-## 依赖包
-
-
-## 编译执行
-
+> 统一封装结果集
 ```yaml
-api:
-  result:
-    enabled: true  # 
-    ann: false  # 
+suifeng:
+    api:
+      result:
+        enabled: true  # 可不显式设置，默认开启
+        ann: false  # 默认为 false，即不开启注解；true，配合 @ResponseResult 或 @RestResponseResult 开启注解
 ```

@@ -1,7 +1,6 @@
 package org.suifeng.baseframework.api.result;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.core.MethodParameter;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.MediaType;
@@ -21,16 +20,16 @@ import static org.suifeng.baseframework.api.common.helper.RestHelper.ok;
  */
 @Order(1)
 @ControllerAdvice
-@EnableConfigurationProperties(ResponseResultProperties.class)
 public class ResultResponseBodyAdvice implements ResponseBodyAdvice {
 
     @Autowired
     private ResponseResultProperties responseResultProperties;
 
     /**
-     * 这个方法表示对于哪些请求要执行 beforeBodyWrite，返回 true 执行，返回 false 不执行
+     * 这个方法表示对于哪些请求要执行 beforeBodyWrite
      * @param  returnType, converterType
-     * @return boolean
+     * @return boolean 返回 true 执行，返回 false 不执行
+     * @since 1.0.0
      */
     @Override
     public boolean supports(MethodParameter returnType, Class converterType) {
@@ -48,13 +47,14 @@ public class ResultResponseBodyAdvice implements ResponseBodyAdvice {
      * 重写返回体
      * @param  body, returnType, selectedContentType, selectedConverterType, request, response
      * @return java.lang.Object
+     * @since 1.0.0
      */
     @Override
     public Object beforeBodyWrite(Object body, MethodParameter returnType, MediaType selectedContentType,
                                   Class selectedConverterType,
                                   ServerHttpRequest request, ServerHttpResponse response) {
         // 如果返回体已经是 CommonResult 类型，则不必再次包装
-        if ((body instanceof CommonResult)) {
+        if (body instanceof CommonResult) {
             return body;
         }
         return ok(body);

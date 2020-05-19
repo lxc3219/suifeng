@@ -6,7 +6,7 @@ import java.lang.annotation.*;
 
 /**
  * 自定义标识注解，用于标识该接口需要被 CommonResult 包装
- * 常标记于类上，代替 @Controller，@ResponseBody，@ResponseResult
+ * 常标记于类上，代替 @Controller，@ResponseBody，@RestController，@ResponseResult
  * @author luoxc
  * @since 1.0.0
  */

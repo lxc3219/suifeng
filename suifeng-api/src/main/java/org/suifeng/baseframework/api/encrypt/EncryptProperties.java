@@ -1,9 +1,9 @@
 package org.suifeng.baseframework.api.encrypt;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+import org.suifeng.baseframework.api.common.ApiPropertiesPrefix;
 
-@ConfigurationProperties(prefix = "api.encrypt")
+@ConfigurationProperties(prefix = ApiPropertiesPrefix.API_ENCRYPT_PROP_PREFIX)
 public class EncryptProperties {
 	/**
 	 * AES加密KEY

@@ -6,9 +6,11 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.suifeng.baseframework.api.common.ApiPropertiesPrefix;
 
 @Configuration
-@ConditionalOnProperty(prefix = "api.rest", name = "enabled", havingValue = "true")
+@ConditionalOnProperty(prefix = ApiPropertiesPrefix.API_REST_PROP_PREFIX,
+        name = ApiPropertiesPrefix.BASE_PROP_ENABLED_KEY, havingValue = ApiPropertiesPrefix.BASE_PROP_ENABLED_VALUE)
 @Import(RestTemplateConfiguration.class)
 @EnableConfigurationProperties(RestProperties.class)
 public class RestAutoConfiguration {

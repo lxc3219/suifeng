@@ -3,10 +3,11 @@ package org.suifeng.baseframework.api.rest;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.suifeng.baseframework.api.common.ApiPropertiesPrefix;
 
 @Setter
 @Getter
-@ConfigurationProperties(prefix = "api.rest")
+@ConfigurationProperties(prefix = ApiPropertiesPrefix.API_REST_PROP_PREFIX)
 public class RestProperties {
 
 	/**
