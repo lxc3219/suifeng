@@ -1,5 +1,7 @@
 package org.suifeng.baseframework.model.base;
 
+import org.suifeng.baseframework.model.constant.PunctuationMarkConstants;
+
 /**
  * 基础属性前缀
  * @author luoxc
@@ -10,7 +12,7 @@ public class BasePropertiesPrefix {
     /**
      * 基础属性公共前缀
      */
-    protected static final String BASE_PROP_COMMON_PREFIX = "suifeng.";
+    protected static final String BASE_PROP_COMMON_PREFIX = "suifeng" + PunctuationMarkConstants.INTERVAL_NUMBER;
 
     /**
      * 基础属性启用KEY值
@@ -21,4 +23,9 @@ public class BasePropertiesPrefix {
      * 基础属性启用属性值
      */
     public static final String BASE_PROP_ENABLED_VALUE = "true";
+
+    /**
+     * 基础属性禁用属性值
+     */
+    public static final String BASE_PROP_DISABLED_VALUE = "false";
 }

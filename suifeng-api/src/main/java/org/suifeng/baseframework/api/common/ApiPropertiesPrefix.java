@@ -1,6 +1,7 @@
 package org.suifeng.baseframework.api.common;
 
 import org.suifeng.baseframework.model.base.BasePropertiesPrefix;
+import org.suifeng.baseframework.model.constant.PunctuationMarkConstants;
 
 /**
  * 接口相关属性前缀
@@ -9,7 +10,7 @@ import org.suifeng.baseframework.model.base.BasePropertiesPrefix;
  */
 public final class ApiPropertiesPrefix extends BasePropertiesPrefix {
 
-    public static final String API_PROP_COMMON_PREFIX = BASE_PROP_COMMON_PREFIX + "api.";
+    public static final String API_PROP_COMMON_PREFIX = BASE_PROP_COMMON_PREFIX + "api" + PunctuationMarkConstants.INTERVAL_NUMBER;
 
     /**
      * 返回体统一包装配置属性前缀

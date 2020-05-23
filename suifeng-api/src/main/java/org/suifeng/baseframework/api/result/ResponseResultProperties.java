@@ -24,4 +24,5 @@ public class ResponseResultProperties {
      * 启用注解配置：true，启用注解；false，禁用注解
      */
     private boolean ann;
+
 }

@@ -1,1 +1,21 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /${spring.application.name}
+  tomcat:
+    uri-encoding: UTF-8
 
+spring:
+  application:
+    name: suifeng-tests
+
+
+############### 自定义配置 begin ###############
+api:
+  result:
+    enabled: true
+    ann: false
+
+
+
+############### 自定义配置 end ###############

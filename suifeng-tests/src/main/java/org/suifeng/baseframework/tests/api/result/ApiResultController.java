@@ -2,7 +2,6 @@ package org.suifeng.baseframework.tests.api.result;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.suifeng.baseframework.api.common.helper.RestHelper;
 import org.suifeng.baseframework.api.result.annotation.ResponseResult;
@@ -12,6 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 返回体包装测试
  * @author luoxc
  * @since 1.0.0
  */
@@ -38,10 +38,14 @@ public class ApiResultController {
         return RestHelper.bizError(1, "啊，报错了");
     }
 
-    @ResponseBody
     @GetMapping(value = "/test4")
     public String test4() {
         return "只要998";
+    }
+
+    @GetMapping(value = "/test5")
+    public CommonResult test5() {
+        return RestHelper.ok("只要998");
     }
 
 }
