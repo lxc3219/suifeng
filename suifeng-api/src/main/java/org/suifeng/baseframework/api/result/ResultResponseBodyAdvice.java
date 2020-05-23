@@ -23,7 +23,7 @@ import static org.suifeng.baseframework.api.common.helper.RestHelper.ok;
 public class ResultResponseBodyAdvice implements ResponseBodyAdvice {
 
     @Autowired
-    private ResponseResultProperties responseResultProperties;
+    private ResultProperties resultProperties;
 
     /**
      * 这个方法表示对于哪些请求要执行 beforeBodyWrite
@@ -34,7 +34,7 @@ public class ResultResponseBodyAdvice implements ResponseBodyAdvice {
     @Override
     public boolean supports(MethodParameter returnType, Class converterType) {
         // 根据配置是否使用 @RestResponseResult 或 @ResponseResult 启用返回体包装
-        if (responseResultProperties.isAnn()) {
+        if (resultProperties.isAnn()) {
             Class clazz = returnType.getContainingClass();
             return clazz.isAnnotationPresent(RestResponseResult.class) ||
                     clazz.isAnnotationPresent(ResponseResult.class) ||

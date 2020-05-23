@@ -13,7 +13,7 @@ import org.suifeng.baseframework.api.common.ApiPropertiesPrefix;
 @Setter
 @Getter
 @ConfigurationProperties(prefix = ApiPropertiesPrefix.API_RESULT_PROP_PREFIX)
-public class ResponseResultProperties {
+public class ResultProperties {
 
     /**
      * 启用返回体自动包装开关，默认开启

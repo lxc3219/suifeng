@@ -15,7 +15,7 @@ import org.suifeng.baseframework.api.common.ApiPropertiesPrefix;
 @Configuration
 @ConditionalOnProperty(prefix = ApiPropertiesPrefix.API_RESULT_PROP_PREFIX,
         name = ApiPropertiesPrefix.BASE_PROP_ENABLED_KEY, havingValue = ApiPropertiesPrefix.BASE_PROP_ENABLED_VALUE)
-@EnableConfigurationProperties(ResponseResultProperties.class)
+@EnableConfigurationProperties(ResultProperties.class)
 public class ResultAutoConfiguration {
 
     @Bean
