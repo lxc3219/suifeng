@@ -10,9 +10,14 @@ import org.suifeng.baseframework.model.constant.PunctuationMarkConstants;
 public class BasePropertiesPrefix {
 
     /**
+     * 基础属性APP前缀
+     */
+    private static final String BASE_PROP_APPL_PREFIX = "suifeng";
+
+    /**
      * 基础属性公共前缀
      */
-    protected static final String BASE_PROP_COMMON_PREFIX = "suifeng" + PunctuationMarkConstants.INTERVAL_NUMBER;
+    protected static final String BASE_PROP_COMMON_PREFIX = BASE_PROP_APPL_PREFIX + PunctuationMarkConstants.INTERVAL_NUMBER;
 
     /**
      * 基础属性启用KEY值

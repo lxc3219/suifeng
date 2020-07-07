@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * @since 1.0.0
  */
 @Configuration
-@EnableConfigurationProperties(ErrorViewProperties.class)
+@EnableConfigurationProperties(ExceptionProperties.class)
 public class ExceptionAutoConfiguration {
 
     @Bean

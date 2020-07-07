@@ -1,7 +1,6 @@
 package org.suifeng.baseframework.api.result.annotation;
 
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import java.lang.annotation.*;
 
 /**

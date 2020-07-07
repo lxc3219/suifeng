@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 使用 spring 的 restTemplate替代 httpClient 工具
+ * restTemplate 工具类
  * 支持 json 返回格式
  * @author luoxc
  * @since 1.0.0

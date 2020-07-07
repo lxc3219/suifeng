@@ -36,6 +36,9 @@ public class AdminExceptionHandler {
     @Autowired
     private ErrorViewProperties errorViewProperties;
 
+    @Autowired
+    private ExceptionProperties exceptionProperties;
+
     /**
      * 业务异常
      */

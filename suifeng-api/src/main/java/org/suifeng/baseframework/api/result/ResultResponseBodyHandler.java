@@ -18,9 +18,9 @@ import static org.suifeng.baseframework.api.common.helper.RestHelper.ok;
  * @author luoxc
  * @since 1.0.0
  */
-@Order(1)
+@Order(1)  // TODO num是否需要调整
 @ControllerAdvice
-public class ResultResponseBodyAdvice implements ResponseBodyAdvice {
+public class ResultResponseBodyHandler implements ResponseBodyAdvice {
 
     @Autowired
     private ResultProperties resultProperties;

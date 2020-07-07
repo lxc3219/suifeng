@@ -19,9 +19,9 @@ import org.suifeng.baseframework.api.common.ApiPropertiesPrefix;
 public class ResultAutoConfiguration {
 
     @Bean
-    @ConditionalOnMissingBean(ResultResponseBodyAdvice.class)
-    public ResultResponseBodyAdvice resultResponseBodyAdvice() {
-        return new ResultResponseBodyAdvice();
+    @ConditionalOnMissingBean(ResultResponseBodyHandler.class)
+    public ResultResponseBodyHandler resultResponseBodyHandler() {
+        return new ResultResponseBodyHandler();
     }
 
 }
