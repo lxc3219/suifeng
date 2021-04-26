@@ -149,7 +149,7 @@
         <hutool.version>5.2.3</hutool.version>
         <httpcore.verson>4.4.13</httpcore.verson>
         <httpclient.version>4.5.12</httpclient.version>
-        <commons-io.version>2.6</commons-io.version>
+        <commons-io.version>2.7</commons-io.version>
         <commons-codec.version>1.14</commons-codec.version>
         <aspose-words-jdk16.version>16.8.0</aspose-words-jdk16.version>
         <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
